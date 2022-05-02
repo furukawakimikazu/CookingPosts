@@ -1,2 +1,27 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<div class="container">
+  <h1 class=py-3>レシピ</h1>
+</div>
+
+<div class="container">
+
+  <div>
+    <%= attachment_image_tag @recipe, :image %>
+  </div>
+
+  <div class="">
+    <%= @recipe.title %>
+  </div>
+
+  <div class="">
+    <%= simple_format @recipe.body %>
+  </div>
+
+  <% if @recipe.user_id == current_user.id %>
+    <%= link_to '編集', edit_recipe_path(@recipe), class: " " %>
+  <% end %>
+  <br>
+  <%= link_to user_path(@recipe.user) do %>
+    <%= @recipe.user.username %>さんのページへ
+  <% end %>
+</div>
+
