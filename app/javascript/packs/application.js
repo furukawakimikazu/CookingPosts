@@ -8,7 +8,7 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "bootstrap";
-import "../src/styles.scss";
+import "/Users/furukawakimikazu/Desktop/CookingPosts/app/javascript/src/styles.scss";
 
 Rails.start();
 Turbolinks.start();
